@@ -35,42 +35,42 @@
       <legend>Simple text: Nickname</legend>
       <!-- The server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
       <label>
-        <input type="text" id="Nickname" name="Nickname" required>
+        <input type="text" name="nickname" required>
       </label>
     </fieldset>
     <fieldset>
       <legend>Multi-line Text: Biography</legend>
       <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
       <label>
-        <input type="text" id="Biography" name="Biography" required>
+        <textarea rows="10" cols="30" name="biography" required></textarea>
       </label>
     </fieldset>
     <fieldset>
       <legend>Mobile phone number</legend>
       <!-- The server is expecting the user's `mobile_phone` here. -->
       <label>
-        <input type="text" id="mobile_phone" name="mobile phone number" required>
+        <input type="tel" name="mobile_phone_number" required>
       </label>
     </fieldset>
     <fieldset>
       <legend>Website</legend>
       <!-- The server is expecting the user's `website` address here. -->
       <label>
-        <input type="text" id="website" name="website" required>
+        <input type="url" name="website" required>
       </label>
     </fieldset>
     <fieldset>
       <legend>Date of birth</legend>
       <!-- The server is expecting the user's `date_of_birth` here. -->
       <label>
-        <input type="text" id="date_of_birth" name="Date of birth" required>
+        <input type="text" name="date_of_birth" required>
       </label>
     </fieldset>
     <fieldset>
       <legend>Age</legend>
       <!-- The server is expecting the user's `age` in years here. -->
       <label>
-        <input type="text" id="age" name="Age" required>
+        <input type="number" name="Age" required>
       </label>
     </fieldset>
     <div>
@@ -86,9 +86,10 @@
       <legend>True / False, with a default choice</legend>
       <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
       <p>
-        <label>Please select true<br>
+        <label>Please select one true<br>
           <select name="choice_select">
             <option value="true">True
+              <option value="false">False
             </option>
           </select>
         </label>
@@ -98,19 +99,10 @@
       </label>
       <p>
         <label>
-          <input type="radio" name="choice" value="false" checked>False
+          <input type="radio" name="choice" value="false" >False
         </label>
       </p>
-      <p>
-        <label>Please select one true<br>
-          <select name="choice_select">
-            <option value="true">True
-            </option>
-          </select>
-        </label>
-      </p>
-    </fieldset>
-    <fieldset>
+      <fieldset>
       <legend>Confirm</legend>
       <!-- The server is expecting a specific name/value pair of `confirm=true` that the user can confirm, or nothing in its place. -->
       <input type="checkbox" name="confirm" value="true">Confirm
@@ -194,7 +186,7 @@
           -->
       <label for="birds">Select a bird
       </label>
-      <select name="birds">
+      <select id="birds" name="birds">
         <option value="duck">Ducks</option>
         <option value="eagle">Eagles</option>
         <option value="herons">Herons</option>
@@ -266,8 +258,8 @@
               - `robin`: Robins
               - `swallow`: Swallows
           -->
-      <label id="multiple_choice">Birds:</label>
-      <select id="birds" multiple>
+      <label for="multiple_choice">Birds:</label>
+      <select name="birds" id="birds" multiple>
         <option value="duck">Ducks</option>
         <option value="eagle">Eagles</option>
         <option value="herons">Herons</option>
@@ -292,7 +284,6 @@
       <!--
             The server is expecting a hidden `signed=true` pair here.
           -->
-      <label id="hidden"></label>
       <input type="hidden" name="signed" value="true">
     </fieldset>
     <fieldset>
@@ -300,7 +291,7 @@
       <!--
             The server is expecting at least one file here, with the name of `photos`.
           -->
-        <input type="file" name="onja_crew.jpg">
+        <input type="file" name="photo">
     </fieldset>
     <fieldset>
       <legend>Range</legend>

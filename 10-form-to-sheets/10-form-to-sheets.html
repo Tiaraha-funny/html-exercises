@@ -14,14 +14,14 @@
     method="POST">
     <fieldset>
       <legend>
-        Contributor
+        Contributor<br>
       </legend>
       <!--
         The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
         Create a field for each cell in the Google Sheet.
       -->
       <label>
-        <input type="hidden" id="contributor" name="contributor" value="Petah" required>
+        <input type="hidden" name="contributor" value="Petah" required>
       </label>
     </fieldset>
     <fieldset>
@@ -29,7 +29,7 @@
         Artist name:
       </legend>
       <label>
-        <input type="text" id="artist_name" name="artist_name" value="Dah Mama" required>
+        <input type="text" name="artist_name" value="Dah Mama" required>
       </label>
     </fieldset>
     <fieldset>
@@ -37,14 +37,14 @@
         Artist id:
       </legend>
       <label>
-        <input type="text" id="artist_id" name="artist_id" value="Dah_mama" required>
+        <input type="text" name="artist_id" value="Dah_mama" required>
       </label>
     </fieldset>
     <fieldset>
       <legend>
         Genre:
       </legend>
-        <select name="genre">
+        <select name="genre" id="genre">
           <optgroup label="Malagasy Genre">
             <option value="kawitry">Kawitry</option>
             <option value="slow">Slow</option>
@@ -63,7 +63,7 @@
         Photo URL:
       </legend>
       <label>
-        <input type="url" id="photo_url" name="photo_url"><br>
+        <input type="url" name="photo_url"><br>
         <small>Right-click an image, and copy the image web adress</small>
       </label>
     </fieldset>
@@ -72,7 +72,7 @@
         Biography:
       </legend>
             <label>
-        <textarea name="biography">Sorry, we could not find any informatio of this artist.</textarea>
+        <textarea rows="10" cols="20" name="biography"></textarea>
       </label>
     </fieldset>
       <fieldset>
@@ -80,7 +80,7 @@
           Website:
         </legend>
         <label>
-          <input type="text" id="website" name="website" required>
+          <input type="url" name="website" required>
         </label>
       </fieldset>
     <button type="submit">Save</button>
