@@ -105,20 +105,17 @@
           Gender
         </legend>
         <p>
-          <input type="radio" name="gender" value="male">m<br>
-          <input type="radio" name="gender" value="female">f<br>
-          <input type="radio" name="gender" value="not disclosed">na
+          <input type="radio" name="gender" value="m">m<br>
+          <input type="radio" name="gender" value="f">f<br>
+          <input type="radio" name="gender" value="na">na
         </p>
       </fieldset>
-      <fieldset>
-        <legend>
-          Photo
-        </legend>
-        <p>
-          <input type="url" name="profile_photos"><br>
-          We only accept PNGs, JPGs, and WebP formats.
-        </p>
-      </fieldset>
+
+      <p>
+          <label for="photo">Photo (optional)</label><br>
+          <input type="file" name="profile_photos" accept="image/png, image/jepg, image/webp"><br>
+      </p>
+
     </section>
 
     <section>
@@ -132,9 +129,7 @@
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
         -->
-      <p>
-        This excerpt is from a short story called <em><q>The story of your life</q></em> by <em><q> Chiang</q></em>.
-
+      <blockquote>
         <p>
           <em><q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q></em> you'll say
           bitterly, dragging the vacuum cleaner out of the closet.
@@ -150,6 +145,12 @@
           <em><q>If you weren't my mother, this would be illegal,</q></em> you'll say, seething as you unwind the power
           cord and plug it into the wall outlet.
         </p>
+        <footer>
+          <p>
+            This excerpt is from a short story called <em><q>The story of your life</q></em> by <em><q> Chiang</q></em>.
+          </p>
+        </footer>
+      </blockquote>
     </section>
 
     <section>
@@ -172,7 +173,7 @@
         -->
       <table>
         <caption hidden>
-          Summary of the 3 people about their names, weight, height.
+          Summary of the 3 people about their names, weights and heights.
         </caption>
         <thead>
           <tr>
@@ -272,7 +273,7 @@
           </li>
           <li>
             <p>
-            <kbd>COMPUTING</kbd><br>
+            <span>COMPUTING</span><br>
             <b>a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displaysed.<br></b>
             "markup language"
             </p>
